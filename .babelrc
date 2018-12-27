@@ -1,0 +1,19 @@
+{
+  "presets": [
+    [
+      "env",
+      {
+        "include": [
+          "transform-es2015-arrow-functions",
+          "es6.map"
+        ]
+      }
+    ],
+    "react"
+  ],
+  "plugins": [
+    "transform-class-properties",
+    "transform-object-rest-spread",
+    "transform-md-import-to-string"
+  ]
+}

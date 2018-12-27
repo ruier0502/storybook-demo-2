@@ -1,0 +1,84 @@
+{
+  "name": "storybook-react",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "storybook": "start-storybook -p 9001 -c .storybook",
+    "build": "node ./build/build.js",
+    "test": "jest",
+    "test:report": "jest --coverage"
+  },
+  "author": "terrancewan",
+  "license": "ISC",
+  "devDependencies": {
+    "@storybook/addon-actions": "^4.0.11",
+    "@storybook/addon-info": "^4.0.12",
+    "@storybook/addon-knobs": "^4.0.12",
+    "@storybook/addon-links": "^4.0.12",
+    "@storybook/addon-notes": "^4.0.12",
+    "@storybook/addon-options": "^4.0.12",
+    "@storybook/addon-storyshots": "^4.0.12",
+    "@storybook/react": "^4.0.11",
+    "babel-core": "^6.26.3",
+    "babel-eslint": "^10.0.1",
+    "babel-jest": "^23.6.0",
+    "babel-loader": "^7.1.5",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-md-import-to-string": "^1.0.6",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-plugin-transform-require-ignore": "^0.1.1",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "chalk": "^2.4.1",
+    "enzyme": "^3.7.0",
+    "enzyme-adapter-react-16": "^1.7.0",
+    "eslint": "^5.10.0",
+    "eslint-config-imweb": "^0.2.11",
+    "expect": "^23.6.0",
+    "jasmine": "^3.3.1",
+    "jest": "^23.6.0",
+    "lerna": "^3.6.0",
+    "less": "^3.9.0",
+    "less-loader": "^4.1.0",
+    "node-sass": "^4.11.0",
+    "ora": "^3.0.0",
+    "react-test-renderer": "^16.6.3",
+    "rimraf": "^2.6.2",
+    "sass-loader": "^7.1.0",
+    "semver": "^5.6.0",
+    "storybook-addon-specifications": "^2.1.2"
+  },
+  "dependencies": {
+    "antd": "^3.11.6",
+    "prop-types": "^15.6.2",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "jsx"
+    ],
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/components/index.js",
+      ".*\\.(css|less|scss)$": "<rootDir>/components/index.js"
+    },
+    "transform": {
+      "^.+\\.js$": "babel-jest"
+    },
+    "setupFiles": [
+      "./.storybook/__conf__/jestMockConfig.js",
+      "./.storybook/__conf__/enzymeConfig.js"
+    ],
+    "automock": false,
+    "collectCoverageFrom": [
+      "**/components/**"
+    ],
+    "coverageDirectory": "./tests/report"
+  },
+  "engines": {
+    "node": ">=8",
+    "npm": ">=5"
+  }
+}
