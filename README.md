@@ -15,3 +15,4 @@ jest 是facebook推出的一款测试框架，集成了 Mocha，chai，jsdom，s
 >主要功能：
 >1. 快照 http://laichuanfeng.com/work/jest-snapshot-and-dom-testing-in-react/
 ## eslint规范
+>https://www.jianshu.com/p/edda91891fb2
